@@ -1,0 +1,11 @@
+form{
+	display: flex;
+	flex-direction: column;
+}
+button{
+	margin-top: 1rem;
+	margin-right: 1rem;
+}
+.id{
+	color:#F44336;
+}

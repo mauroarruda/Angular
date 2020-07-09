@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+     font-family: Janda;
+     src: url('assets/fonts/JandaManateeBubble.ttf');
+}
+@font-face {
+     font-family: Janda-solid;
+     src: url('assets/fonts/JandaManateeSolid.ttf');
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Janda, "Helvetica Neue", sans-serif; }
+
+.blue{
+	color:#2372D9;
+}
+.v-middle{
+	vertical-align: middle;
+}
+
+.msg-success{
+	background-color: #4CAF50;
+	color:#fff;
+}
+.msg-error{
+	background-color: #C62828;
+	color:#fff;
+}

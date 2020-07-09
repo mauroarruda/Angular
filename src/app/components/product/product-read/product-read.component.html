@@ -1,0 +1,53 @@
+	<p>Produtos cadastrados:</p>
+
+
+<div class="mat-elevation-z8">
+
+	<table mat-table [dataSource]="products">
+
+	  <ng-container matColumnDef="id">
+	    <th mat-header-cell *matHeaderCellDef> Id </th>
+	    <td mat-cell *matCellDef="let element">{{element.id}} </td>
+	  </ng-container>
+
+	  <ng-container matColumnDef="name">
+	    <th mat-header-cell *matHeaderCellDef> Nome </th>
+	    <td mat-cell *matCellDef="let element">{{element.name}} </td>
+	  </ng-container>
+
+	  <ng-container matColumnDef="price">
+	    <th mat-header-cell *matHeaderCellDef> Preço</th>
+	    <td mat-cell *matCellDef="let element"> {{element.price | currency:'BRL'}} </td>
+	  </ng-container>
+
+	  <ng-container matColumnDef="action">
+	    <th mat-header-cell *matHeaderCellDef> Ações</th>
+	    <td mat-cell *matCellDef="let element">
+	    	<a routerLink="/products/update/{{element.id}}" class="edit">
+	    		<i class="material-icons">
+	    			edit
+	    		</i>
+	    	</a>
+	    	<a routerLink="/products/delete/{{element.id}}" class="delete">
+	    		<i class="material-icons">
+	    			delete
+	    		</i>
+	    	</a>
+	    </td>
+	  </ng-container>
+
+	  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+	  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+	</table>
+
+</div>
+
+
+<!--PARA IMPRIMIR DIRETO NO FORM COM *NgFor
+<ul>
+	<li *ngFor="let product of products">
+	{{product.name}}
+	</li>
+</ul>
+-->
